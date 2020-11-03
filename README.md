@@ -21,19 +21,19 @@
       
 <div id="Group Members" >
     <div class="inline-block">
-        <img src ="https://github.com/Deshanch/practise/blob/master/photos/member1.jpg" align="left" width="250" height="250">
+        <img src ="https://github.com/cepdnaclk/e16-3yp-automated-railway-ticketing-system/blob/main/Photos/member1.jpg" align="left" width="250" height="250">
     </div>
     <div class="inline-block">
-        <img src ="https://github.com/Deshanch/practise/blob/master/photos/member3.jpg" align="left" width="250" height="250">
+        <img src ="https://github.com/cepdnaclk/e16-3yp-automated-railway-ticketing-system/blob/main/Photos/member3.jpg" align="left" width="250" height="250">
     </div>
     <div class="inline-block">
-       <img src ="https://github.com/Deshanch/practise/blob/master/photos/member2.jpg" alt= " "  width="230" height="250">
+       <img src ="https://github.com/cepdnaclk/e16-3yp-automated-railway-ticketing-system/blob/main/Photos/member2.jpg" alt= " "  width="230" height="250">
     </div>
 </div>
 
 ## Introduction
 
-![image](https://github.com/Deshanch/practise/blob/master/photos/intro.jpg)
+![image](https://github.com/cepdnaclk/e16-3yp-automated-railway-ticketing-system/blob/main/Photos/introduction.jpg)
 Automated Railway Ticketing System whose scope is expanding across the world are now starting to be used not just for public transport ticketing services but also to provide users with an infrastructure that they use in their daily lives including electronic money and mobile services,credit card integration, building access control, and student identification.
 
 Most of leading companies in the world have already contributed to this process through the development and implementation of smartcard ticketing systems for different regions and is now working on the development of systems that support the implementation of smart systems that underpin society and combine information and controlto provide new social infrastructure for the foreseeable future.
@@ -55,14 +55,14 @@ Most of leading companies in the world have already contributed to this process 
 
 ## The Proposed System With Full Explanation
 
-<img src="https://github.com/Deshanch/practise/blob/master/photos/explain1.jpg" alt="image_architecture" width="400" height="500" />
+<img src="https://github.com/cepdnaclk/e16-3yp-automated-railway-ticketing-system/blob/main/Photos/explain1.jpg" alt="image_architecture" width="400" height="500" />
 
 * Every passenger should enroll to the department and when he/she enroll will get a plastic card which has a key to his/her account.
 * Passenger can recharge their account using cash, ez-cash, debit/credit card.
 * When he/she enters to the platform he/she only have to swipe the card and the starting point will be added to the database.
 * Then they can seated anywhere he/she like
 
-<img src="https://github.com/Deshanch/practise/blob/master/photos/explain.jpg" alt="image_detect" width="650" height="350"/>
+<img src="https://github.com/cepdnaclk/e16-3yp-automated-railway-ticketing-system/blob/main/Photos/explain.jpg" alt="image_detect" width="650" height="350"/>
 
 * Ticket checker will swipe their card again and class(1,2,3) will be added to the database.
 * Finally passenger should swipe their card at the destination station. Then the cost will be deducted from their account.
