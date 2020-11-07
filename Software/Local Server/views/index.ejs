@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Server</title>
+    <!-- doesnt work for jquery new versions. You need to use the jQuery 1.x serires -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+    crossorigin="anonymous"></script>
+    <!-- when linking css file, though it is in 'public/assets' we don't need to give that whole address
+    here. When app search for css file, it already looking in the public folder because we added that path in app.js file
+    'app.use(express.static('./public'));' like this. So we only need to set path from there -->
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css"> 
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>
