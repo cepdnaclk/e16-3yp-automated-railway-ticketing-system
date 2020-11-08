@@ -10,9 +10,139 @@
     <!-- when linking css file, though it is in 'public/assets' we don't need to give that whole address
     here. When app search for css file, it already looking in the public folder because we added that path in app.js file
     'app.use(express.static('./public'));' like this. So we only need to set path from there -->
-    <link rel="stylesheet" href="/assets/styles.css" type="text/css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="/assets/styles.css" type="text/css">  -->
 </head>
 <body>
-    <h1>Hello World!</h1>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+		<!-- <a href="#" class="navbar-brand"><img src="assets/img/w3newbie.png" alt=""></a> -->
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbar_id"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse justify-content-center" id="navbar_id">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a href="#" class="nav-link active">HOME</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">SIGNUP</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">LOGIN</a></li>
+		</ul>
+		</collapse>	
+	</nav><!-- class="navbar" -->
+
+	<div id="home">
+		<div class="landing-text">
+			<h1>Railway Ticketing System</h1>
+			<h3>Manage Your Traveling On Your Own</h3>
+			<a href="#" title="" class="btn btn-danger btn-lg">Login</a>
+		</div><!-- class="landing-text" -->
+	</div><!-- id="home" -->
+
+	<div class="padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 card bg-primary mb-1" style="max-width: 18rem;">
+					<!-- <img src="assets/img/bootstrap.png" alt="" class="img-fluid"> --> <!-- in bootstrap3 class="img-responsive" -->
+                    <div class="card-header">
+                        <h5>Check Train Schedules</h5>
+                    </div><!-- class="card-header" -->
+                    <div class="card-body">
+
+                        <input type="search" name="source" id="source" placeholder="Source" required><br><br>
+                        <input type="search" name="destination" id="destination" placeholder="Destination" required><br><br>
+                        <input type="date" name="date" id="date">
+                        
+                    </div><!-- class="card-body" -->
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-danger">Check</button>
+                    </div><!-- class="card-footer" -->
+                </div>
+				<div class="col-sm-8 text-center">
+					<h2>Make your journey easy with us...</h2>
+					<p class="lead">Get registered as our customer and get lot of benefits.. <br>
+						You your personalized card for all your traveling
+
+					</p>
+
+					<p class="lead">Make your life easier with our system. Use your eWallet and swip card
+						for all these...Why are you waiting! Sign in and start your journey with us :)
+					</p>
+				</div>
+			</div><!-- class="row" -->
+		</div><!-- class="container" -->
+	</div><!-- class="padding" -->
+
+	<!-- <div class="padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<h4>Built with Sass</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<img src="assets/img/sass.png" alt="" class="img-fluid">
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<h4>And Less</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<img src="assets/img/less.png" alt="" class="img-fluid">
+				</div> -->
+			<!-- </div> --><!-- class="row" -->
+		<!-- </div> --><!-- class="container" -->
+	<!-- </div> --><!-- class="padding" -->
+
+	<div class="fixed">
+		
+	</div>
+
+	<div class="padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h2>Here's the cool thing ...</h2>
+					<h5>Manage Your eWallet by crediting your account...We well take care of every other thing...</h5>
+					<h5>Use our facilities from any device at any place</h5>
+				</div>
+
+				<div class="col-sm-6">
+					<img src="assets/img/bootstrap.png" alt="" class="img-fluid" style="max-width: 18rem;">
+				</div>
+			</div><!-- class="row" -->
+		</div><!-- class="container" -->
+	</div><!-- class="padding" -->
+
+	<footer class="container-fluid text-center bg-primary">
+		<div class="row">
+			<div class="col-sm-4">
+				<h3>Contact Us</h3>
+				<br>
+				<h4>Our Contact Info Here.</h4>
+			</div>
+			
+			<div class="col-sm-4">
+				<!-- <img src="assets/img/b.png" alt="" class="icon img-fluid" style="width: 200px;"> -->
+			</div>
+
+			<div class="col-sm-4">
+				<h3>Connect</h3>
+				<a href="#" title="" class="fa fa-facebook"></a>
+				<a href="#" title="" class="fa fa-twitter"></a>
+				<a href="#" title="" class="fa fa-google"></a>
+				<a href="#" title="" class="fa fa-linkedin"></a>
+				<a href="#" title="" class="fa fa-youtube"></a>
+				<a href="#" title="" class="fa fa-instagram"></a>
+			</div>
+		</div><!-- class="row" -->
+	</footer>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,11 +1,13 @@
-# Online/Local Server
+# Railway Ticketing System
 
-Just wrote the server side code to run as an online server. Completely working fine in aws.
+This is a my 3rd year project code backup. Will be updated when I'm working on it :)
 
-## To build required packages in Locally:
-##### npm install
-##### npm install -g nodemon
 
-## Ro run:
-##### "npx nodemon server.js" or "npm start"
+# Before Run(If you run in a local machine)
+Type this command in your IDE terminal to run and build all the required packages: npm install
+
+# To Run: 
+npm install -g nodemon
+npx nodemon server.js
+
 
