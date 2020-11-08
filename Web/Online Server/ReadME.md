@@ -1,11 +1,11 @@
-# Local Server
+# Online/Local Server
 
-Just wrote the server side code to run in locally.
+Just wrote the server side code to run as an online server. Completely working fine in aws.
 
-## To build required packages:
+## To build required packages in Locally:
 ##### npm install
 ##### npm install -g nodemon
 
 ## Ro run:
-##### npx nodemon app.js
+##### "npx nodemon server.js" or "npm start"
 
