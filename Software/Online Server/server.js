@@ -10,6 +10,9 @@ app.use(express.static('./public')); //finding any static file inside the public
 //fire controllers
 todoController(app);
 
+const port = process.env.PORT || 3000;
 //listen to port
-app.listen(3000);
+app.listen(port, ()=>{
+    console.log("whazzaaaaap");
+});
 console.log('You are listening to port 3000');
