@@ -42,7 +42,7 @@ body {
     background-size: cover;
 }
 
-.fixed2 {
+.fixed1 {
     background: url(img/back1.jpg) no-repeat center center fixed;
     display: table;
     height: 60%;
