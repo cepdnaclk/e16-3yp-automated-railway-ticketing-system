@@ -96,22 +96,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 text-center">
-                    <h2>Solution Architecture</h2>
+                    <h2>System FLow</h2>
                     <p class="lead">
-                        Every passenger should enroll to the department and when he/she enroll will get a plastic card which has a key to his/her account. Passenger can recharge their account using cash, ez-cash, debit/credit card. When he/she enters to the platform he/she only
-                        have to swipe the card and the starting point will be added to the database.
+                        Initially passenger have to register in out system and then he will be giveb a passenger card and then he can swipe the card and enter the station.
+                        At the entrance our system verify the passenger account, check that there is sufficient money in the passsenger accout or any other system error 
+                        like account freezing.
                     </p>
                     <p class="lead">
-                        Then they can seated anywhere he/she like Ticket checker will swipe their card again and class(1,2,3) will be added to the database. Finally passenger should swipe their card at the destination station. Then the cost will be deducted from their account.
-                        The gate at the destination will be closed until this procedure for each passenger.
+                        If there is no such error and if there is no any illegal activity at his entrance then he can enter to the train and in there ticket checker checks 
+                        about the passenger class.Then at the exit passenger has to swipe the card and system releases the freeze accuont and if the passenger don't swipe 
+                        the card then freeze will continue.
                     </p>
-                    <p class="lead">All money transactions and travelling history can be tracked and a database can be managed. All of the details related to passengers account can be managed by using app pr website.
+                    <p class="lead">
+                        After that the using the travel details system automatically do the money balances and all the updated details will be sent to the database.
                     </p>
 
                 </div>
                 <div class="col-sm-6 col-xs-12">
-                    <img src="img/block-diagram.jpg" alt="" class="img-fluid">
-                    <img src="img/explain1.jpg" alt="" class="img-fluid">
+                    <img src="img/flowchart.png" alt="" class="img-fluid">
                 </div>
 
             </div>
