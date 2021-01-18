@@ -15,4 +15,7 @@ router.route('/class/:Id')
 router.route('/end/:Id')
     .put(auth, authAdmin, uncomTravelCtrl.endTravel)
 
+router.route('/removeFreez/:Id')
+    .put(auth, authAdmin, uncomTravelCtrl.removeFreez)
+
 module.exports = router
