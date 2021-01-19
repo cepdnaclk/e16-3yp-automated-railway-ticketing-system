@@ -51,6 +51,22 @@ const paymentCtrl = {
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
+    },
+    increasePayment: async (req, res) => {
+        try {
+            await Payment.updateMany({}, {$inc:{first: req.body.first, second: req.body.second, third: req.body.third}})
+            res.json({msg: "Increased payments"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    decreasePayment: async (req, res) => {
+        try {
+            await Payment.updateMany({}, {$inc:{first: -req.body.first, second: -req.body.second, third: -req.body.third}})
+            res.json({msg: "Decreased payments"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
     }
 }
 
