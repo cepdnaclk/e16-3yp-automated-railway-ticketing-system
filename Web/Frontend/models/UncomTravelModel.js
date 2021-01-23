@@ -19,16 +19,20 @@ const uncomTravelSchema = new mongoose.Schema({
         default: 3
     },
     TrainId: {
-        type: String
+        type: String,
+        default: 'n/a'
     },
     Train:{
-        type: String
+        type: String,
+        default: 'n/a'
     },
     E_StationId:{
-        type: String
+        type: String,
+        default: 'n/a'
     },
     E_StationName:{
-        type: String
+        type: String,
+        default: 'n/a'
     },
     cost:{
         type: Number,

@@ -48,7 +48,6 @@ class APIfeatures {
 const travelCtrl = {
     getTravels: async (req, res) =>{
         try {
-
             const features = new APIfeatures(Travel.find({UserId: req.params.Id}), req.query).filtering().sorting().paginating()
             const travels = await features.query
             res.json({
