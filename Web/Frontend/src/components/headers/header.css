@@ -1,0 +1,54 @@
+header{
+    /* position: fixed; */
+    min-height: 70px;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ddd; 
+    background-color: #0377fc;
+    /* padding: 0; */
+    
+}
+
+header .logo{
+    flex: 1;
+    margin-top: 15px;
+
+}
+header a{
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+}
+header ul li{
+    display: inline-block;
+    /* opacity: 0.8; */
+    padding: 20px 20px;
+    font-size: large;
+    font-weight: 600;
+
+}
+header ul li:hover{
+    transition: transform .3s; /* Animation */
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.menu{
+    display: none;
+}
+.cart-icon{
+    position: relative;
+    margin-right: 20px;
+}
+.cart-icon span{
+    background: crimson;
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    top:-10px;
+    right: -10px;
+    padding: 5px 7px;
+    font-size: 10px;
+}
