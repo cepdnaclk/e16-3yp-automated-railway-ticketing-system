@@ -48,12 +48,13 @@ function Main() {
 
     if(loading) return <div><Loading /></div>
     return (
-        <div>
-            <div>
-            
+        <div className="container-fluid">
             <Filter />
-            <table class="table table-hover container">
-                <thead>
+            <div className="table-responsive">
+            
+            
+            <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+                <thead className="thead-dark">
                     <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
@@ -82,10 +83,11 @@ function Main() {
                 </tbody>
             </table>
             <Loadmore />
-            {customers.length === 0 && <Loading />}
-            {customers.length !== 0 && <Footer />}
+            
             
         </div>
+            {customers.length === 0 && <Loading />}
+            {customers.length !== 0 && <Footer />}
         </div>
     )
 }

@@ -14,6 +14,7 @@ function Profile() {
     const [loading, setLoading] = useState(false)
     const [profile, setProfile] = useState([])
     const [user, setUser] = useState([])
+    const [callback] = state.customerAPI.callback
     
 
     useEffect(() =>{
@@ -24,7 +25,7 @@ function Profile() {
             setProfile(res.data)
         }
         getUser()
-    })
+    },[callback])
 
     const handleSubmit = async e =>{
         e.preventDefault()

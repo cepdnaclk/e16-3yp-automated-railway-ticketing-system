@@ -1,24 +1,25 @@
 import {useState} from 'react'
 
 
-function CustomerAPI() {
-    const [customers, setCustomers] = useState([])
+function TrainAPI() {
+    const [trains, setTrains] = useState([])
     const [callback, setCallback] = useState(false)
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
     const [result, setResult] = useState(0)
-    const [city, setCity] = useState('')
     const [Id, setId] = useState('')
+    const [name, setName] = useState('')
+    
 
     return {
-        customers: [customers, setCustomers],
+        trains: [trains, setTrains],
         callback: [callback, setCallback],
         sort: [sort, setSort],
         page: [page, setPage],
         result: [result, setResult],
-        city: [city, setCity],
-        Id: [Id, setId]
+        Id: [Id, setId],
+        name: [name, setName]
     }
 }
 
-export default CustomerAPI
+export default TrainAPI

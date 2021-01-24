@@ -10,6 +10,16 @@ import Travels from '../mainpages/Travels/Travels'
 import Main from '../mainpages/customer/Main'
 import Customer from '../mainpages/customer/Customer'
 import User from '../mainpages/User/User'
+import Uncom from '../mainpages/uncomTravel/UncomTravel'
+import Freezed from '../mainpages/uncomTravel/FreezedAccount'
+import Trains from '../mainpages/trains/Trains'
+import CreateTrain from '../mainpages/trains/CreateTrain'
+import Stations from '../mainpages/stations/Stations'
+import CreateStation from '../mainpages/stations/CreateStation'
+import Payments from '../mainpages/Payment/Payments'
+import CreatePayment from '../mainpages/Payment/CreatePayment'
+import Increase from '../mainpages/ChangePrice/Increase'
+import Decrease from '../mainpages/ChangePrice/Decrease'
 
 function Pages() {
     const state = useContext(GlobalState)
@@ -29,22 +39,19 @@ function Pages() {
             <Route path="/customer/update/:Id" exact component={isAdmin ? Customer : NotFound} />
             <Route path="/customer/register" exact component={isAdmin ? Customer : NotFound} />
             <Route path="/user" exact component={isAdmin ? User : NotFound} />
-            {/* <Route path="/ProductsAll" exact component={ProductsAll} />
-            <Route path="/detail/:id" exact component={DetailProduct} />
-            <Route path="/category/:id" exact component={Category} />
-
-            <Route path="/login" exact component={isLogged ? NotFound : Login} />
-            <Route path="/register" exact component={isLogged ? NotFound : Register} />
-
-            <Route path="/category" exact component={isAdmin ? Categories : NotFound} />
-            <Route path="/create_product" exact component={isAdmin ? CreateProduct : NotFound} />
-            <Route path="/edit_product/:id" exact component={isAdmin ? CreateProduct : NotFound} />
-
-            <Route path="/history" exact component={isLogged ? OrderHistory : NotFound} />
-            <Route path="/history/:id" exact component={isLogged ? OrderDetails : NotFound} />
-
-            <Route path="/cart" exact component={Cart} /> */}
-
+            <Route path="/uncomTravel" exact component={isAdmin ? Uncom : NotFound} />
+            <Route path="/removeFreez" exact component={isAdmin ? Freezed : NotFound} />
+            <Route path="/trains" exact component={isAdmin ? Trains : NotFound} />
+            <Route path="/createTrain" exact component={isAdmin ? CreateTrain : NotFound} />
+            <Route path="/createTrain/:Id" exact component={isAdmin ? CreateTrain : NotFound} />
+            <Route path="/stations" exact component={isAdmin ? Stations : NotFound} />
+            <Route path="/createStation" exact component={isAdmin ? CreateStation : NotFound} />
+            <Route path="/createStation/:Id" exact component={isAdmin ? CreateStation : NotFound} />
+            <Route path="/payments" exact component={isLogged ? Payments : NotFound} />
+            <Route path="/createPayment" exact component={isAdmin ? CreatePayment : NotFound} />
+            <Route path="/createPayment/:Id" exact component={isAdmin ? CreatePayment : NotFound} />
+            <Route path="/increase" exact component={isAdmin ? Increase : NotFound} />
+            <Route path="/decrease" exact component={isAdmin ? Decrease : NotFound} />
 
             <Route path="*" exact component={NotFound} />
         </Switch>

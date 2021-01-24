@@ -66,10 +66,10 @@ function Footer() {
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-sm-7">
-                            <p class="mb-0 f_400">© cakecounter Inc.. 2019 All rights reserved.</p>
+                            <p class="mb-0 f_400"></p>
                         </div>
                         <div class="col-lg-6 col-sm-5 text-right">
-                            <p>Made with <i class="icon_heart"></i> in <a href="#">CakeCounter</a></p>
+                            <p></p>
                         </div>
                     </div>
                 </div>

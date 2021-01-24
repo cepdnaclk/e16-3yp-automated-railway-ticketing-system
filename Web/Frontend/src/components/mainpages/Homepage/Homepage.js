@@ -19,7 +19,7 @@ function Homepage() {
     return (
         <>
         <div className="container-fluid row">
-            <div class="jumbotron col-md-6 mt-5 ml-5 mr-5">
+            <div class="jumbotron container col-md-6 mt-5 col-sm-6 ml-3 mr-5">
                 <h1 class="display-3">Train Schedules</h1>
                 <p class="lead">You can find any train schedule from here!</p>
                 <hr class="my-4" />

@@ -24,6 +24,11 @@ function Header() {
             <>
                 <li class="nav-item"><Link class="nav-link" to="/customer">Customer</Link></li>
                 <li class="nav-item"><Link class="nav-link" to="/user">App User</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/uncomTravel">Freezed Account</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/trains">Trains</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/stations">Stations</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/increase">Increase Prices</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/decrease">Decrease Prices</Link></li>
             </>
         )
     }
@@ -32,7 +37,6 @@ function Header() {
         return(
             <>
                 <li class="nav-item"><Link class="nav-link" to="/profile">Profile</Link></li>
-
                 <li class="nav-item"><Link class="nav-link" to="/travels">History</Link></li>
             </>
         )
@@ -40,8 +44,8 @@ function Header() {
 
     const loggedRouter = () =>{
         return(
-            <>
-
+            <>  
+                <li class="nav-item"><Link class="nav-link" to="/payments">Payments</Link></li>
                 <li class="nav-item"><Link class="nav-link" to="/" onClick={logoutUser}>Logout</Link></li>
             </>
         )
