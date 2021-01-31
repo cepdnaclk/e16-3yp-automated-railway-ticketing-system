@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="449.0" spacing="10.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StationPCController.GateTestController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label text="User Id">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="userIdIn" prefHeight="31.0" prefWidth="330.0" promptText="The Key of Stripe card" />
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <Label fx:id="errorLabel" prefHeight="21.0" prefWidth="276.0" textFill="#9e9696">
+         <VBox.margin>
+            <Insets left="50.0" />
+         </VBox.margin></Label>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button fx:id="swipeBtn" mnemonicParsing="false" onAction="#swipe" text="Swipe" />
+        </buttons>
+      </ButtonBar>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
