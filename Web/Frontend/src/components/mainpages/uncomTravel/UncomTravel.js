@@ -34,7 +34,8 @@ function UncomTravel() {
             <button class="btn btn-warning col-md-1" onClick={() => findTravel()}>Search</button>
             
             {uncom !== '' &&
-            <table class="table table-hover container mt-5">
+            <div className="table-responsive">
+            <table class="table table-bordered table-striped table-responsive-stack mt-5" id="tableOne">
                 <thead className="thead-dark">
                     <tr>
                     <th scope="col">Id</th>
@@ -55,6 +56,7 @@ function UncomTravel() {
                     
                 </tbody>
             </table>
+            </div>
             }
 
             {uncom === '' &&

@@ -48,7 +48,8 @@ function Trains() {
     return (
         <div>
             <Filter />
-            <div className="container table-responsive">
+            <div className='container-fluid'>
+            <div className="table-responsive">
             <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
                 <thead className="thead-dark">
                     <tr>
@@ -74,6 +75,8 @@ function Trains() {
                     
                 </tbody>
             </table>
+            </div>
+            
             </div>
             {trains.length === 0 && <Loading />}
             {trains.length !== 0 && <Footer />}

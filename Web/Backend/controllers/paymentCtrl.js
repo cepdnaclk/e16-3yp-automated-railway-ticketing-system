@@ -7,7 +7,7 @@ const paymentCtrl = {
             const s1 = req.body.s1
             const s2 = req.body.s2
             let Id;
-
+            console.log(req.body)
             const station1 = await Station.findOne({Id: s1})
             if(!station1) return res.status(400).json({msg: "Station 1 Id is incorrect"})
 
@@ -23,6 +23,10 @@ const paymentCtrl = {
             }else{
                 Id = s2+s1
             }
+            console.log(Id)
+            const respons = Station.findOne({Id: Id})
+            if(respons) return res.status(400).json({msg: "Payment method available for this Id"})
+            
             const newPayment = new Payment({
                 Id: Id,
                 first: req.body.first,
@@ -36,8 +40,9 @@ const paymentCtrl = {
         }
     },
     getPayment: async (req, res) => {
+        console.log(req.body)
         try {
-            const payment = await Payment.find({Id: req.params.Id})
+            const payment = await Payment.findOne({Id: req.params.Id})
             if(!payment) return res.status(400).json({msg: "Cannot find"})
             res.json(payment)
         } catch (err) {

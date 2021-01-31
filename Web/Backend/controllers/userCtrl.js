@@ -29,7 +29,8 @@ const userCtrl = {
 
             res.cookie('refreshtoken', refreshtoken, {
                 httpOnly: true,
-                path: '/user/refresh_token'
+                path: '/user/refresh_token',
+                maxAge: 7*24*60*60*1000 //7d
             })
 
             res.json({accesstoken});
@@ -42,7 +43,7 @@ const userCtrl = {
     login: async (req, res) =>{
         try {
             const {Id, password} = req.body;
-
+            console.log(req.body)
             const user = await Users.findOne({Id})
             if(!user) return res.status(400).json({msg: "User does not exists!"})
 
@@ -55,7 +56,8 @@ const userCtrl = {
 
             res.cookie('refreshtoken', refreshtoken, {
                 httpOnly: true,
-                path: '/user/refresh_token'
+                path: '/user/refresh_token',
+                maxAge: 7*24*60*60*1000 // 7d
             })
 
             res.json({accesstoken});
@@ -93,7 +95,7 @@ const userCtrl = {
         try {
             const user = await Users.findById(req.user.id).select('-password')
             if(!user) return res.status(400).json({msg: "User does not exist"})  
-            res.json({user}) 
+            res.json(user) 
         } catch (err) {
             return res.status(500).json({msg: err.message}) 
         }
@@ -102,16 +104,18 @@ const userCtrl = {
         try {
             const passwordOld = req.body.passwordOld
             const passwordNew = req.body.passwordNew
+            const passwordConf = req.body.passwordConf
             const user = await Users.findOne({Id: req.params.Id})
             if(!user) return res.status(400).json({msg: "User does not exist"}) 
 
             const isMatch = await bcrypt.compare(passwordOld, user.password)
             if(!isMatch) return res.status(500).json({msg: "Old password you provided is incorrect"})
-
+            if(passwordNew !== passwordConf) return res.status(500).json({msg: "Confirm password you provided is mismatching"})
+            if(passwordNew === passwordOld) return res.status(500).json({msg: "New password cannot be the same as oldOne"})
             const passwordHash = await bcrypt.hash(passwordNew, 10)
 
             await Users.findOneAndUpdate({Id: user.Id}, {password: passwordHash})
-            res.json("Password updated successfully")
+            res.json({msg:"Password updated successfully"})
 
         } catch (err) {
             return res.status(500).json({msg: err.message}) 
@@ -126,6 +130,7 @@ const userCtrl = {
         }
     },
     findUser: async (req, res) => {
+        console.log(req.body)
         const user = await Users.findOne({Id: req.params.Id}).select('-password')
         if(!user) return res.status(400).json({msg: "User does not exixts"})
         res.json(user)

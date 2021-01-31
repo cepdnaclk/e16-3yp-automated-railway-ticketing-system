@@ -5,10 +5,9 @@ const authAdmin = require('../middleware/authAdmin')
 
 router.route('/payment')
     .post(auth, authAdmin, paymentCtrl.createPayment)
-    
 
 router.route('/payment/:Id')
-    .get(auth, authAdmin, paymentCtrl.getPayment)
+    .get(auth, paymentCtrl.getPayment)
     .put(auth, authAdmin, paymentCtrl.updatePayment)
 
 router.route('/payments/increase')

@@ -1,10 +1,51 @@
 const Station = require('../models/StationModel')
 
+class APIfeatures {
+    constructor(query, queryString){
+        this.query = query
+        this.queryString = queryString
+    }
+    filtering(){
+        const queryObj = {...this.queryString} //queryString = req.query
+ 
+        const excludedFields = ['page', 'sort', 'limit']
+        excludedFields.forEach(el => delete(queryObj[el]))
+        
+        let queryStr = JSON.stringify(queryObj)
+        queryStr = queryStr.replace(/\b(gte|gt|lt|lte|regex)\b/g, match => '$' + match)
+ 
+     //    gte = greater than or equal
+     //    lte = lesser than or equal
+     //    lt = lesser than
+     //    gt = greater than
+        this.query.find(JSON.parse(queryStr))
+        console.log(JSON.parse(queryStr))
+          
+        return this;
+    }
+    sorting(){
+        if(this.queryString.sort){
+            const sortBy = this.queryString.sort.split(',').join(' ')
+            console.log(sortBy)
+            this.query = this.query.sort(sortBy)
+        }else{
+            this.query = this.query.sort('-createdAt')
+        }
+        return this;
+
+    }
+}
+
 const stationCtrl = {
     getStations: async(req, res) => {
         try {
-            const stations = await Station.find()
-            res.json(stations)
+            const features = new APIfeatures(Station.find(), req.query).filtering().sorting()
+            const stations = await features.query
+            res.json({
+                status: 'success',
+                results: stations.length,
+                stations: stations
+            })
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
@@ -33,7 +74,7 @@ const stationCtrl = {
     },
     updateStation: async (req, res) => {
         try {
-            await Station.findByIdAndUpdate({Id: req.params.Id}, {name: req.body.name})
+            await Station.findOneAndUpdate({Id: req.params.Id}, {name: req.body.name})
             res.json({msg: "Updated the station"})
         } catch (err) {
             return res.status(500).json({msg: err.message}) 

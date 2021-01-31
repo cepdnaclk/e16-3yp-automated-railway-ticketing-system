@@ -48,13 +48,19 @@ class APIfeatures {
 const customerCtrl = {
     register: async (req, res) =>{
         try {
-            const {Id, name, address, balance, deposit} = req.body;
+            const Id = req.body.Id
+            const name = req.body.name
+            const address1 = req.body.address1
+            const address2 = req.body.address2
+            const address3 = req.body.address3
+            const phone = req.body.phone
+            const balance = req.body.deposit
 
             const customer = await Customers.findOne({Id})
             if(customer) return res.status(400).json({msg:'The Id already exists.'})
 
             const newCustomer = new Customers({
-                Id, name, address, balance, deposit
+                Id, name, address1, address2, address3, phone,  balance
             })
 
             await newCustomer.save()
@@ -65,6 +71,7 @@ const customerCtrl = {
         }
     },
     getCustomers: async (req, res) =>{
+        console.log(req.body)
         try {
             const features = new APIfeatures(Customers.find(), req.query).filtering().sorting().paginating()
             const customers = await features.query
@@ -79,14 +86,18 @@ const customerCtrl = {
         }
     },
     updateCustomer: async (req, res) => {
+        console.log(req.body)
         try {
             const deposit = req.body.deposit
             let balance = req.body.balance
             const name = req.body.name
-            const address = req.body.address
+            const address1 = req.body.address1
+            const address2 = req.body.address2
+            const address3 = req.body.address3
+            const phone = req.body.phone
             if(deposit !== 0)
                 balance = balance + deposit
-            await Customers.findOneAndUpdate({Id: req.params.Id}, {balance: balance, name:name, address: address})
+            await Customers.findOneAndUpdate({Id: req.params.Id}, {balance: balance, name:name, address1: address1, address2: address2, address3: address3, phone: phone})
             res.json({msg: "Success!"});
 
         } catch (err) {
@@ -95,6 +106,7 @@ const customerCtrl = {
     },
     getCustomer: async (req, res) =>{
         try {
+            console.log(req.params)
             const customer = await Customers.findOne({Id: req.params.Id})
             if(!customer) return res.status(400).json({msg:"Cannot find a customer"})
 

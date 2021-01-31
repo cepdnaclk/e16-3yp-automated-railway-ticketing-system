@@ -2,18 +2,19 @@ const router = require('express').Router()
 const uncomTravelCtrl = require('../controllers/UncomTravelCtrl')
 const auth = require('../middleware/auth')
 const authAdmin = require('../middleware/authAdmin')
+const check = require('../middleware/check') 
 
 router.route('/:Id')
     .get(auth, authAdmin, uncomTravelCtrl.getUncomTravel)
 
 router.route('/start/:Id')
-    .post(auth, authAdmin, uncomTravelCtrl.createTravel)
+    .post(check, uncomTravelCtrl.createTravel)
 
 router.route('/class/:Id')
-    .put(auth, authAdmin, uncomTravelCtrl.updateClass)
+    .put(check, uncomTravelCtrl.updateClass)
 
 router.route('/end/:Id')
-    .put(auth, authAdmin, uncomTravelCtrl.endTravel)
+    .put(check, uncomTravelCtrl.endTravel)
 
 router.route('/removeFreez/:Id')
     .put(auth, authAdmin, uncomTravelCtrl.removeFreez)

@@ -15,6 +15,8 @@ app.use('/user', require('./routes/userRouter'))
 app.use('/api/customer', require('./routes/customerRouter'))
 app.use('/api', require('./routes/trainRouter'))
 app.use('/api', require('./routes/stationRouter'))
+app.use('/api', require('./routes/travelRouter'))
+app.use('/api', require('./routes/paymentRouter'))
 app.use('/api/uncom', require('./routes/uncomRouter'))
 
 //Connect to MongoDB
@@ -28,6 +30,13 @@ mongoose.connect(URI,{
     if(err) throw err;
     console.log('Connected to MongoDB')
 })
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'))
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+    })
+}
 
 
 app.get('/', (req, res) =>{

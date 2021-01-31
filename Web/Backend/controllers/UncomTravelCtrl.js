@@ -114,7 +114,7 @@ const uncomTravelCtrl = {
         }
     },
     removeFreez: async (req, res) => {
-
+        console.log(req.body)
         try {
             const s1 = req.body.S_StationId
             const s2 = req.body.E_StationId
@@ -127,11 +127,11 @@ const uncomTravelCtrl = {
             }else{
                 paymentId = s2+s1
             }
-
+            console.log(paymentId)
             const payment = await Payment.findOne({Id: paymentId})
             if(!payment) return res.status(500).json({msg: "Don't have payment cost for this travel"})
             let cost;
-            switch (isStarted.class) {
+            switch (req.body.class) {
                 case 1:
                     cost = payment.first
                     break;
@@ -145,7 +145,7 @@ const uncomTravelCtrl = {
                     cost = payment.third
                     break;
             }
-
+            console.log(cost)
             const customer = await Customer.findOne({Id: req.params.Id})
             let balance = customer.balance
             if(balance < cost) return res.status(500).json({msg: "Not sufficient balance"})
@@ -159,8 +159,9 @@ const uncomTravelCtrl = {
                 Train : req.body.Train,
                 E_StationId : req.body.E_StationId,
                 E_StationName : req.body.E_StationName,
-                cost : req.body.cost
+                cost : cost
             })
+            console.log(newTravel)
             await newTravel.save()
             await Uncom.findOneAndDelete({UserId: req.params.Id})
             balance = balance - cost

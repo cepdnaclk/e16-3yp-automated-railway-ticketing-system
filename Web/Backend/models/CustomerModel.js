@@ -10,6 +10,9 @@ const customerSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    phone:{
+        type: String
+    },
     address1:{
         type: String,
     },
@@ -20,6 +23,10 @@ const customerSchema = new mongoose.Schema({
         type: String,
     },
     balance:{
+        type: Number,
+        default: 0
+    },
+    deposit:{
         type: Number,
         default: 0
     }

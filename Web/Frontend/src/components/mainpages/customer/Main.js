@@ -48,6 +48,7 @@ function Main() {
 
     if(loading) return <div><Loading /></div>
     return (
+        <div>
         <div className="container-fluid">
             <Filter />
             <div className="table-responsive">
@@ -85,6 +86,7 @@ function Main() {
             <Loadmore />
             
             
+        </div>
         </div>
             {customers.length === 0 && <Loading />}
             {customers.length !== 0 && <Footer />}

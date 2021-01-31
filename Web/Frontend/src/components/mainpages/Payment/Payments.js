@@ -77,8 +77,8 @@ function Payments() {
             
             
             {payment !== '' &&
-            
-            <table class="table table-hover container mt-5">
+            <div className="table-responsive">
+            <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
                 <thead className="thead-dark">
                     <tr>
                     <th scope="col">First Class</th>
@@ -102,6 +102,7 @@ function Payments() {
                     
                 </tbody>
             </table>
+            </div>
             }
             
             {payment === '' &&
