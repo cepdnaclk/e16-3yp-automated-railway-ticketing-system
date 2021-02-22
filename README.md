@@ -1,6 +1,7 @@
 
 # Project Name : Automated Railway Ticketing System
-# Visit our page : https://cepdnaclk.github.io/e16-3yp-automated-railway-ticketing-system/
+> [Visit our page](https://cepdnaclk.github.io/e16-3yp-automated-railway-ticketing-system/) 
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
