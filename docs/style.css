@@ -107,3 +107,8 @@ footer {
         max-width: 100px;
     }
 }
+
+.carousel-control-next,
+.carousel-control-prev, .carousel-indicators /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
