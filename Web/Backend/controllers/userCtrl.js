@@ -134,6 +134,17 @@ const userCtrl = {
         const user = await Users.findOne({Id: req.params.Id}).select('-password')
         if(!user) return res.status(400).json({msg: "User does not exixts"})
         res.json(user)
+    },
+    recharge: async (req, res) => {
+        try {
+            const deposit = req.body.deposit;
+            const balance = await Customers.findOne({Id: req.body.userId}).select('balance')
+            if(!balance) return res.status(400).json({msg: "User does not exists"})
+            await Customers.findOneAndUpdate({Id: req.body.userId}, {balance: balance.balance + deposit})
+            res.json({msg: "Recharged Successfully"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        } 
     }
 }
 

@@ -19,4 +19,6 @@ router.delete('/:Id', auth, authAdmin, userCtrl.deleteUser)
 
 router.get('/:Id', auth, authAdmin, userCtrl.findUser)
 
+router.post('/recharge', auth, userCtrl.recharge)
+
 module.exports = router

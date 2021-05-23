@@ -5,6 +5,7 @@ import Image from '../../headers/icon/profile.svg'
 import './profile.css'
 import axios from 'axios'
 import Footer from '../../footers/Footer'
+import PaypalButton from './PaypalButton'
 
 
 function Profile() {
@@ -14,6 +15,7 @@ function Profile() {
     const [loading, setLoading] = useState(false)
     const [profile, setProfile] = useState([])
     const [user, setUser] = useState([])
+    const [deposit, setDeposit] = useState(0)
     const [callback] = state.customerAPI.callback
     
 
@@ -35,7 +37,7 @@ function Profile() {
                 headers: {Authorization: Token}
             })
             alert("Changed password")
-            window.location.href = "/profile";
+            window.location.href = "/";
         } catch (err) {
             alert(err.response.data.msg)
         }
@@ -44,6 +46,19 @@ function Profile() {
     const handleChangeInput = e =>{
         const {name, value} = e.target
         setUser({...user, [name]:value})
+    }
+
+    const handleChangeDeposite = e => {
+        const {value} = e.target
+        setDeposit(parseInt(value))
+    }
+
+    const tranSuccess = async(payment) => {
+        await axios.post('/user/recharge', {userId,deposit}, {
+            headers: {Authorization: Token}
+        })
+        alert("Recharge Successfully")
+        window.location.href = "/";
     }
 
     if(loading) return <div><Loading /></div>
@@ -56,7 +71,16 @@ function Profile() {
                         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
                         <h3>Welcome</h3>
                         <p><strong> Account Balance: Rs {profile.balance} </strong></p>
-                        
+
+                        <div className="form-group row justify-content-center align-items-center mr-auto ml-auto">
+                            <label htmlFor="deposit" class="col-md-1 col-form-label">Recharge</label>
+                            <input type="number" name="deposit" id="deposit" required class="col-md-3"
+                            value={deposit} onChange={handleChangeDeposite} />
+                        </div>
+
+                        <PaypalButton
+                        total={deposit}
+                        tranSuccess={tranSuccess} />
                     </div>
                     <div class="col-md-9 register-right">
                     <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">

@@ -40,7 +40,7 @@ function Filter() {
                         onChange={e => setId(e.target.value)} />
                     </div>
                     <div class="input-group mb-3 col-md-3">
-                        <Link to="/createStation" type="button" class="btn btn-warning btn-sm btn-block">Create Train</Link>                   
+                        <Link to="/createStation" type="button" class="btn btn-warning btn-sm btn-block">Create Station</Link>                   
                     </div>
                     
                 </div>
