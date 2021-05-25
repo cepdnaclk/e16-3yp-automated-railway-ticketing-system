@@ -20,6 +20,9 @@ const uncomTravelCtrl = {
             const UserId = req.params.Id
             const S_StationId = req.body.S_StationId
 
+            const user = await Customer.findOne({Id: UserId})
+            if(!user) return res.status(400).json({msg: "Invalid card"})
+
             const isFreezed = await Uncom.findOne({UserId: UserId})
             if(isFreezed) return res.status(400).json({msg: "This account is freezed."})
 
