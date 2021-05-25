@@ -11,22 +11,21 @@
 
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <h6 style="color:rgb(236, 236, 243);">PROJECT BLOG</h6>
+        <h6 style="color:rgb(236, 236, 243);" class="navbar-brand">PROJECT BLOG</h6>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar_id"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse justify-content-center" id="navbar_id">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav lead text-capitalize">
                 <li class="nav-item"><a href="#problem" class="nav-link active">About</a></li>
                 <li class="nav-item"><a href="#design" class="nav-link active">Design</a></li>
-                <li class="nav-item"><a href="#flow" class="nav-link active">Flow</a></li>
-                <li class="nav-item"><a href="#er" class="nav-link active">ER diagram</a></li>
-                <li class="nav-item"><a href="#circuit" class="nav-link active">Circuit</a></li>
-                <li class="nav-item"><a href="#budjet" class="nav-link active">Budget</a></li>
+                <li class="nav-item"><a href="#flow" class="nav-link active">System Info</a></li>
+                <li class="nav-item"><a href="#circuit" class="nav-link active">Circuits</a></li>
                 <li class="nav-item"><a href="#webandsoftware" class="nav-link active">Software</a></li>
                 <li class="nav-item"><a href="#testing" class="nav-link active">Testing</a></li>
-                <li class="nav-item"><a href="#designs" class="nav-link active">Designs</a></li>
-                <li class="nav-item"><a href="#benifits" class="nav-link active">Benifit</a></li>
-                <!-- <li class="nav-item"><a href="#more" class="nav-link active">More</a></li> -->
-                <li class="nav-item"><a href="#more" class="nav-link active">Connect</a></li>
+                <li class="nav-item"><a href="#documents" class="nav-link active">Documents</a></li>
+                <li class="nav-item"><a href="#benifits" class="nav-link active">Benifits</a></li>
+                <li class="nav-item"><a href="#budjet" class="nav-link active">Budget</a></li>
+                <li class="nav-item"><a href="#more" class="nav-link active">Contact</a></li>
+                
             </ul>
             </collapse>
     </nav>
@@ -35,47 +34,59 @@
     <div id="home">
         <div class="landing-text">
             <h1 style="color:rgb(198, 199, 223);">Automated Railway Ticketing System</h1>
-            <h3 style="color:rgb(198, 199, 223);">Better Future.</h3>
+            <h3 style="color:rgb(198, 199, 223);">Travel Easy</h3>
             <a href="#problem" title="" class="btn btn-lg" style="background-color: #b0dcfc;">Get Started</a>
         </div>
         <!-- class="landing-text" -->
     </div>
     <!-- id="home" -->
 
+
+
     <div class="padding" id="problem">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-6 text-center">
-                    <h2>Problem</h2>
-                    <p class="lead">In srilanka people waste there valuable time by spending in long queues in railway stations. Eventhough people donot get better experiance when travelling. This problem effects badly on every aspects in day to day life of passengers.
-                    </p>
-                    <p class="lead">And another thing is using cardboard tickets for entrances increases environmental pollusions and keeping several officers for ticket issueing increase the government expenses.
-                    </p>
-                </div>
-                <div class="col-sm-6 text-center">
-                    <h2>Solution</h2>
-                    <p class="lead">Introducing fully automated system which consisted of automatic gates and realtime web services.
-                    </p>
-                    <p class="lead">This reduces the time wastage as passengers have several entrances and no unefficient human involvements for ticketing. No environmental pollusion any more as no tickets in the system. This will make the life easier.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=dk-tifztMlw" target="_blank" title="" class="btn btn-lg btn-danger">Watch Introduction video</a>
+                <div class="col-sm-5 text-center bg-warning">
                     
+                    <h2 class="card-title text-danger mt-5">Problem</h2>
+                    <p class="card-text lead mb-5">In srilanka people waste there valuable time by spending in long queues in railway stations. Eventhough people do not get better experience when travelling. This problem effects badly on every aspects in day to day life of passengers.
+                    <br>
+                    And another thing is using cardboard tickets for entrances increases environmental pollutions and keeping several officers for ticket issueing increase the government expenses.
+                </p>
+                </div>
+                <div class="col-sm-2">
+                    
+                </div>
+                
+                <div class="col-sm-5 text-center bg-primary">
+                    <h2 class="card-title text-warning mt-5">Solution</h2>
+                    <p class="card-text lead mb-5 text-white">Introducing fully automated system which consisting automatic gates and realtime web services with a one card for every travel.
+                    <br>
+                    This reduces the time wastage as passengers have several entrances and no unefficient human involvements for ticketing. No environmental pollution any more as no tickets in the system. This will make the life easier.
+                    </p>
                 </div>
             </div>
             <!-- class="row" -->
+            
         </div>
         <!-- class="container" -->
     </div>
     <!-- class="padding" -->
 
+    <div>
+        <div class="container-fluid mt-5 mb-5">
+            <div style="padding:40% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/554776500?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Introduction-video.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>  
+        </div>
+    </div>
+
     <div class="padding" id="design">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 text-center">
-                    <h2>Solution Architecture</h2>
+                    <h2 class="text-danger mb-5">Solution Architecture</h2>
                     
                     <p class="lead">
-                        Every passenger should enroll to the department and when he/she enroll will get a plastic card which has a key to his/her account. Passenger can recharge their account at the cashier. When he/she enters to the platform he/she only
+                        Every passenger should enroll to the department and when he/she enroll will get a plastic card which has a key to his/her account. Passenger can recharge their account at the cashier or using their bank accounts. When he/she enters to the platform he/she only
                         have to swipe the card and the starting point will be added to the database.
                     </p>
                     <p class="lead">
@@ -87,8 +98,14 @@
 
                 </div>
                 <div class="col-sm-6 col-xs-12">
-                    <img src="img/block-diagram.jpg" alt="" class="img-fluid">
-                    <img src="img/explain1.jpg" alt="" class="img-fluid">
+                    <a href="img/block-diagram.jpg">
+                        <img src="img/block-diagram.jpg" alt="" class="img-fluid">
+                    </a>
+                    
+                    
+                    <a href="img/archi.PNG">
+                        <img src="img/archi.PNG" alt="" class="img-fluid">
+                    </a>
                 </div>
 
             </div>
@@ -97,6 +114,108 @@
         <!-- class="container" -->
     </div>
     <!-- class="padding" -->
+    
+    <div class="padding">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-sm-12 text-center">
+                    <h1 class="text-primary">Physical Design</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="img/Picture1.png" alt="" srcset="">
+                </div>
+
+                <div class="col-sm-5">
+                    <img src="img/hand held.png" alt="" srcset="">
+                </div>
+            </div>
+            <!-- class="row" -->
+        </div>
+        <!-- class="container" -->
+    </div>
+
+    <div class="padding" id="designs">
+        <div class="container">
+            <div class="row">
+                <h1 class="col-md-12 mt-5 text-danger text-center">CAD Designs</h1>
+            </div>
+            <div class="row text-center">
+                <h3 class="col-md-12 mt-3 text-center text-success">Design for handheld device</h3>
+            </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide mt-5 col-md-7 ml-auto mr-auto" data-ride="carousel">
+                
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox" style="width:100%;">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/Full view.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/top.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/bottom.png" alt="Third slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/side.png" alt="Fourth slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                </div>
+            <!-- class="row" -->
+
+            <div class="row">
+                <h3 class="mt-5 col-md-12 text-center text-info">Design for Gate device</h3>
+            </div>
+
+            <div id="carsol-2" class="carousel slide mt-5 col-md-7 ml-auto mr-auto" data-ride="carousel">
+                
+                <ol class="carousel-indicators">
+                  <li data-target="#carsol-2" data-slide-to="0" class="active"></li>
+                  <li data-target="#carsol-2" data-slide-to="1"></li>
+                  <li data-target="#carsol-2" data-slide-to="2"></li>
+                  <li data-target="#carsol-2" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox" style=" width:100%;">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/complte_pers_1.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/complte_pers_2.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/open_pers2.png" alt="Third slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img/open_iso3.png" alt="Fourth slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carsol-2" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carsol-2" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                </div>
+        </div>
+        <!-- class="container" -->
+    </div>
 
     <div class="fixed">
 
@@ -104,23 +223,29 @@
      <div class="padding" id="flow">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 text-center">
-                    <h2>System Flow</h2>
-                    <p class="lead">
-                        Initially passenger have to register in our system and then he/she will be given a passenger card and then he/she can swipe the card and enter the station.
-                        At the entrance our system will verify the passenger account, check that there is sufficient money in the passsenger account(the minimum balance should be 500.00 RS) or any other system error 
-                        like account freezing.Account freezing will happen when the passenger leave destination station without paying the travel cost.
+                <div class="col-sm-6 text-center bg-dark">
+                    <h2 class="text-danger mb-5 mt-5">System Flow</h2>
+                    <p class="lead mb-5 text-white">
+                        Initially a passenger should register to our system by purchasing a swipe card from the railway department. Then that person will be elligible to use our traveling system by using their card. Card owner can recherge their account on their own by using their bank accounts. Otherwise 
+                        Payment methods are added to recharge from the counter at the railway station. When the person who travels, should swipe their card at the entrance gate. Then by checking theri account status gate will be activated.
+                    </p>
+                    <p class="lead mb-5 text-white">
+                        If there is no error and if there is no any illegal activity at his entrance, then he can enter to the train. When entering to the train his/her account will be holded
+                        until he/she leaves destination after swiping their card. In the train, ticket checker checks 
+                        about the passenger class & will update the person's class(class 1, class 2). Any persons' default class will be "class 3". 
+                    </p>
+                    <p class="lead mb-5 text-white">
+                        Then at the exit, passenger should swipe the card and system releases the holded accuont. At that time all the calculations will be happened and travel cost will be reduced from his/her account.
+                        and if the passenger don't swipe 
+                        the card then their account will be transfered in to a freezed state. In the freeze state what happens is, he can't enter again from an entrance gate without paying his last travel cost.
+                    </p>
+                    <p class="lead text-white">
+                        All these activities will be recorded in to a database. If a passenger wants to see their travel details, that person can register to our web application using his/her user id. That user id will be provided when that person
+                        initially register to our travelling system.    
                     </p>
                     <p class="lead">
-                        If there is no such error and if there is no any illegal activity at his entrance, then he can enter to the train.When entering to the train his/her account will be holded
-                        until he/she leaves destination after swiping.In the train ticket checker checks 
-                        about the passenger class.Then at the exit, passenger has to swipe the card and system releases the holded accuont and if the passenger don't swipe 
-                        the card then account will be freezed. In the freeze state what happens is, he can't enter from an entrance gate without paying our fine.
-                    </p>
-                    <p class="lead">
-                        After that using the travel details, system automatically do the money balances and all the updated details will be sent to the database.
-                    </p>
 
+                    </p>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <img src="img/flowchart.png" alt="" height="1200px;">
@@ -137,17 +262,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2>Entity Relationship Diagram</h2>
-                    <p class="lead">
-                        This is the main database and here customer can see the travel details within a month passenger account details and updated train schedules.
-                        This gives realtime data regard to the customer requierments.
-                    </p>
-                    <p class="lead">
-                        This is nomarlized with much efficiency to handle quick and real time data handling.
-                    </p>
+                    <h2 class="text-info mb-5">Entity Relationship Diagram</h2>
                 </div>
                 <div class="col-sm-12 col-xs-12">
-                    <img src="img/ER.png" alt="" class="img-fluid">
+                    <a href="img/ER.png">
+                        <img src="img/ER.png" alt="" class="img-fluid">
+                    </a>
+                    
                 </div>
 
             </div>
@@ -161,14 +282,56 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2>Circuit Diagrams</h2>
+                    <h2 class="text-danger mb-2">Circuit Diagrams</h2>
                     
                 </div>
                 <div class="col-sm-12 col-xs-12 mt-5">
-                    <h3>Gate Circuit</h3>
-                    <img src="img/RailwayTicketingSystemCircuitDiagramsV11.png" alt="Gate Circuit" class="img-fluid" id="gate">
-                    <h3 class="mt-5">Handheld Device Circuit</h3>
-                    <img src="img/Schematic_RailwayTicketing system_HandHeld_device.png" alt="" class="img-fluid">
+                    <h3 class="col-md-12 text-info mb-3 text-center">Gate Circuit</h3>
+                    <a href="img/RailwayTicketingSystemCircuitDiagramsV11.png">
+                        <img src="img/RailwayTicketingSystemCircuitDiagramsV11.png" alt="Gate Circuit" class="img-fluid" id="gate">
+                    </a>
+                    
+                    <h3 class="mt-5 text-success mb-5 col-md-12 text-center">Handheld Device Circuit</h3>
+                    <a href="img/Schematic_RailwayTicketing system_HandHeld_device.png">
+                        <img src="img/Schematic_RailwayTicketing system_HandHeld_device.png" alt="" class="img-fluid">
+                    </a>
+
+                    <div id="carsol3" class="carousel slide mt-5 col-md-7 mr-auto ml-auto" data-ride="carousel">
+                
+                        <ol class="carousel-indicators">
+                          <li data-target="#carsol3" data-slide-to="0" class="active"></li>
+                          <li data-target="#carsol3" data-slide-to="1"></li>
+                          <li data-target="#carsol3" data-slide-to="2"></li>
+                          <li data-target="#carsol3" data-slide-to="3"></li>
+                          <li data-target="#carsol3" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox" style="width:100%; ">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/3d-top.PNG" alt="First slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="img/3d-3.PNG" alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="img/3d-1.PNG" alt="Third slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="img/3d-2.PNG" alt="Fourth slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="img/3d-bottom.PNG" alt="Fifth slide">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carsol3" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carsol3" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                    
                 </div>
 
             </div>
@@ -177,46 +340,34 @@
         <!-- class="container" -->
     </div>
     <!-- class="padding" -->
-    <div class="padding" id="budjet">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12">
-                    <img src="img/Bdget-final.PNG" alt="" class="img-fluid">
-                </div>
-
-            </div>
-            <!-- class="row" -->
-        </div>
-        <!-- class="container" -->
-    </div>
-    <!-- class="padding" -->
+    
     <div class="text-center" id="webandsoftware">
-        <h2>Main software and Web application</h2>
-    </div>
+        
+    
     <div class="container-fluid">
         <div class="row">
-          <div class="col-6 text-center mt-5">
-            <h4 class="mb-5">Software at the stations</h4>
-            <img src="img/Screenshot (530).png" alt="" srcset="" style="width: 600px;">
-                <p class="lead mt-5">
-                    This is the software used for the physical opertions of the system. This contain the software handlers at the gates(entrances and exits).
-                    This software system is also conneted with the central server and is running on the stations pcs mounted in each station. This is capable of all the 
-                    functionalities needed.Entering, Exiting, Authenticating & Error checking are some such funtions.This is written in java and some hardware functionalities
-                    are also displayed using the gui.
-                </p>
-                <p class="lead">A demonstration video has uploaded to the youtube.</p>
-                <a href="https://youtu.be/OI5Bu_gYzJs" target="_blank" class="btn btn-lg btn-primary mt-5" >click here to watch demo</a>
+          <div class="col-12 text-center mt-5">
+            <h1 class="text-danger mb-5">Gate controlling Software</h1>
+    
+            <div style="padding:40% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/554887521?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Gate Software Process Demo.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            
+            <p class="container lead mt-5 bg-info padding pr-5 pl-5">
+                This is the software used for the physical opertions of the system. This contain the software handlers at the gates(entrances and exits).
+                This software system is also conneted with the central server and is running on the stations PCs mounted in each station. This is capable of all the 
+                functionalities needed.Entering, Exiting, Authenticating & Error checking are some such funtions.This is written in Java and some hardware functionalities
+                are also displayed using the GUI.
+            </p>
           </div>
-          <div class="col-6 text-center mt-5">
-            <h4 class="mb-5">User web application</h4>
-            <img src="img/web.JPG" alt="" srcset="" style="width: 600px; height: 330px;">
-                <p class="lead mt-5">
-                    This web application can be used by both admins(officers incharged by railway department) and the users.Users can get smart facilities like 
-                    account balance details checking, travel details checking etc. Admins can do better performances using this web application. All the security actions 
+          <div class="col-12 text-center mt-5">
+            <h1 class="mb-5 text-danger">User Web application</h1>
+            <div style="padding:43% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/554915188?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Web Application Demo.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                <p class="container lead mt-5 bg-warning padding pr-5 pl-5">
+                    This web application can be used by both admins(officers incharged by railway department) and the users. Users can get smart facilities like 
+                    account balance details checking, Rechgarge their account, travel details checking etc. Admins can do better performances using this web application. All the security actions 
                     are taken here to enhance the better performances. Front end consists of html, css, java script where use react.js and backend consists of java script
-                    where use node.js .
+                    where use node.js.
                 </p>
-                <h5>Hands on the Web Application</h5>
+                <h5 class="mt-5 text-info">Hands on experience</h5>
                 <div class="container">
                     <div class="row">
                         <div class="col-6">
@@ -230,30 +381,33 @@
                             <p>Password: admin001</p>
                         </div>
                     </div>
-                    <a href="https://rts-railway.herokuapp.com/" target="_blank" class="btn btn-lg btn-success">click here to get hands on</a>
+                    <a href="https://rts-railway.herokuapp.com/" target="_blank" class="btn btn-lg btn-success">click here to tryout!</a>
                 </div>
           </div>
         </div>
         <div class="container">
-            <p class="lead mt-5">
-                Both these applications are connected to a central server written in java script where node.js is used and data base is mongodb atlas.
+            <h1 class="mt-5 text-danger mb-5">Database Point of View</h1>
+            
+            <div style="padding:48% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/554897265?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Database Point of View Demo.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            
+            <p class="lead mt-5 bg-success padding pr-5 pl-5">
+                Both Gate Controller Software & Web Application connected to a central server written in javascript where node.js, express is used. As the Database MongoDB Atlas cloud used
+                due to security aspects and scalability. There are more things offering us by Mongo. Specially it takes less time to read/write to the database.
             </p>
-            <a href="https://youtu.be/5TVLXFpwxWI" target="_blank" class="btn btn-lg btn-warning">click here to see how it works</a>
+            
         </div>
         
     </div>
-    <div class="padding" id="webandsoftware">
-
-    <!-- class="container" -->
     </div>
+   
     <!-- class="padding" -->
     
     <div id="testing">
         <div class="container">
             <div class="row">
                 <div class="text-center">
-                    <h2>Testing</h2>
-                    <h4 class="mt-5">Summery Report</h4>
+                    <h1 class="mt-5 text-danger mb-5">Testing</h1>
+                    
                     <table class="table table-striped table-dark table-bordered">
                         <thead>
                           <tr>
@@ -344,9 +498,9 @@
 
                 </div>
                 <div class="container">
-                    <h2 class="text-center mt-5">Some Test Results</h2>
+                    <h2 class="text-center mt-5 text-info mb-5">Some Test Results</h2>
                     <img src="img/Picture1.jpg" alt="" class="img-fluid mt-5" style="width: 100%;">
-                    <img src="img/Picture2.jpg" alt="" class="img-fluid mt-5" style="width: 100%;">
+                    <img src="img/Picture2.jpg" alt="" class="img-fluid mt-5 mb-5" style="width: 100%;">
 <!--                     <img src="img/testing.JPG" alt="" class="img-fluid"> -->
                 </div>
 
@@ -356,90 +510,26 @@
         <!-- class="container" -->
     </div>
     <!-- class="padding" -->
-    
-    <div class="padding" id="designs">
-        <div class="container">
-            <div class="row">
-                <h1 class="mt-5">CAD Designs</h1>
+
+    <div class="container padding" id="documents">
+        <div class="row">
+            <div class="container">
+                <h1 class="mb-5 text-center text-danger">Download Documents from here👇</h1>
+                
+                <div class="col-md-12 text-center">
+                    <h4><a href="img/Design Manual.pdf" download ><button class="btn btn-lg btn-info">Design Manual</button></a></h4>
+                </div>
+                <div class="col-md-12 text-center">
+                    <h4><a href="img/User Manual.pdf" download ><button class="btn btn-lg btn-warning">User Manual</button></a></h4>
+                </div>
                 
             </div>
-            <div class="row">
-                <h3 class="mt-3">Design for handheld device</h3>
-            </div>
-
-            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
-                
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox" style=" width:100%; height: 800px !important;">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/Full view.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/top.jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/bottom.png" alt="Third slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/side.png" alt="Fourth slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-                </div>
-            <!-- class="row" -->
-
-            <div class="row">
-                <h3 class="mt-5">Design for Gate device</h3>
-            </div>
-
-            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
-                
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox" style=" width:100%; height: 800px !important;">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/complte_pers_1.png" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/complte_pers_2.png" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/open_pers2.png" alt="Third slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/open_iso3.png" alt="Fourth slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-                </div>
         </div>
-        <!-- class="container" -->
     </div>
+    
+    
 
-    <div class="padding" id="testing">
+    <!-- <div class="padding" id="testing">
         <div class="container">
             <div class="row">
                 <h2>Future Enhancements</h2>
@@ -448,10 +538,10 @@
             <div class="row">
                 <p>We hope to extend our payment methods far beyond like ez cash, credit/debit payments. Then there is nothing to worry about paying to the cashier</p>
             </div>
-            <!-- class="row" -->
+            
         </div>
-        <!-- class="container" -->
-    </div>
+        
+    </div> -->
     <!-- class="padding" -->
     
     
@@ -462,28 +552,44 @@
 
     <div class="padding" id="benifits">
         <div class="container">
-            <h4>Benifits for the man kind</h4>
+            <h1 class="col-md-12 text-danger text-center mb-4">Benifits for the man kind</h1>
             <br>
             <div class="row">
-                <div class="col-sm-2">
-                    <i class='fas fa-child' style='font-size:50px'></i>
+                <div class="col-sm-3">
+                    <img src="img/train.svg" alt="" srcset="" style="height:50px;" class="mb-5">
                     <h5>Best passenger experiance</h5>
                 </div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2">
-                    <i class='fa fa-desktop' style='font-size:50px'></i>
-                    <h5>User friendly web services</h5>
+                
+                <div class="col-sm-3">
+                    <img src="img/app.svg" alt="" srcset="" style="height:50px;" class="mb-5">
+                    <h5>User friendly Interactive App</h5>
                 </div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2">
-                    <i class='fas fa-leaf' style='font-size:50px'></i>
-                    <h5>Environmental friendliness</h5>
+                
+                <div class="col-sm-3">
+                    <img src="img/time.svg" alt="" srcset="" style="height:50px;" class="mb-5">
+                    <h5>Save more Time to User</h5>
                 </div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2">
-                    <i class='fas fa-hand-holding-usd' style='font-size:50px'></i>
-                    <h5>Reduction of expenditure</h5>
+                
+                <div class="col-sm-3">
+                    <img src="img/sec.svg" alt="" srcset="" style="height:50px;" class="mb-5">
+                    <h5>More Security Provided</h5>
                 </div>
+            </div>
+            <!-- class="row" -->
+        </div>
+        <!-- class="container" -->
+    </div>
+    <!-- class="padding" -->
+
+    <div class="padding" id="budjet">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <a href="">
+                        <img src="img/Bdget-final.PNG" alt="" class="img-fluid">
+                    </a>
+                </div>
+
             </div>
             <!-- class="row" -->
         </div>
@@ -494,18 +600,18 @@
     <footer class="container-fluid text-center" id="more">
         <div class="row">
             <div class="col-sm-4">
-                <h3>For more details</h3>
+                <h3 class="mb-5">For more details</h3>
                 <h4>Visit our github project repository</h4>
                 <br>
                 <a href="https://github.com/cepdnaclk/e16-3yp-automated-railway-ticketing-system" target="_blank" title="" class="btn btn-lg" style="background-color: #b0dcfc;">Visit Now</a>
             </div>
             <div class="col-sm-8">
-                <h3>Connect With Us</h3>
+                <h3 class="text-center">Connect With Us</h3>
                 <div class="row">
-                    <div class="col-sm-3"></div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-3">
                         <br>
-                        <i class='fas fa-user' style='font-size:50px'></i>
+                        <img src="img/github-brands.svg" alt="" style="height: 50px;" class="mb-3">
                         <br>
                         <a href="https://github.com/Deshanch" target="_blank" style="color:rgb(198, 199, 223);">Deshan L.A.C </a><br>
                         <a href="#" style="color:rgb(198, 199, 223);">Madushan K.H.G.H</a><br>
@@ -513,13 +619,19 @@
                     </div>
                     <div class="col-sm-3">
                         <br>
-                        <i class='fas fa-envelope' style='font-size:50px'></i>
-                        <p style="color:rgb(198, 199, 223);">deshanch9678@gmail.com</p>
-                        <p style="color:rgb(198, 199, 223);">hasindumadushan325@gmail.com </p>
-                        <p style="color:rgb(198, 199, 223);">kavindumadushanka972@gmail.com</p>
-
+                        <img src="img/email.svg" alt="" style="height: 50px;" class="mb-3"><br>
+                        <a href="mailto:deshanch9678@gmail.com" class="text-white">deshanch9678@gmail.com</a><br>
+                        <a href="mailto:hasindumadushan325@gmail.com" class="text-white">hasindumadushan325@gmail.com</a><br>
+                        <a href="mailto:kavindumadushanka972@gmail.com" class="text-white">kavindumadushanka972@gmail.com</a>
                     </div>
-                    <div class="col-sm-3"></div>
+                    <div class="col-sm-2 ml-5">
+                        <br>
+                        <img src="img/call.svg" alt="" style="height: 50px;" class="mb-3">
+                        <br>
+                        <a href="tel:+94711204836" class="text-white">+94 71 1204836</a><br>
+                        <a href="tel:+94764825922" class="text-white">+94 76 4825922</a><br>
+                        <a href="tel:+94772894172" class="text-white">+94 77 2894172</a>
+                    </div>
                 </div>
             </div>
         </div>
