@@ -1,0 +1,1 @@
+#### This folder includes the PCB Designs of hardware components. 
